@@ -13,7 +13,8 @@ const app = new Vue({
 
     methods: {
         nextPhoto: function() {
-            // return this.photoIndex++;
+            clearInterval(this.autoplay);
+
             if(this.photoIndex == this.photos.length - 1) {
                 return this.photoIndex = 0;
             } else {
@@ -22,7 +23,8 @@ const app = new Vue({
         },
 
         prevPhoto: function() {
-            // return this.photoIndex--;
+            clearInterval(this.autoplay);
+
             if(this.photoIndex == 0) {
                 return this.photoIndex = this.photos.length - 1;
             } else {
@@ -31,9 +33,15 @@ const app = new Vue({
         },
 
         toSelectedPhoto: function(index) {
+            clearInterval(this.autoplay);
+
             return this.photoIndex = index;
         }
     },
 
-    // mounted: 
+    mounted: function() {
+        let autoplay = setInterval(this.nextPhoto, 3000);
+
+        return autoplay;
+    }
 }); 
