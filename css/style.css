@@ -11,10 +11,18 @@ body {
 
 .flex_container {
     display: flex;
-    width: 60%;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: auto;
     align-items: center;
+    justify-content: space-between;
+}
+
+.photo_container {
+    width: 800px;
+}
+
+.photo_container img {
+    width: 100%;
 }
 
 .prev_photo, .next_photo {

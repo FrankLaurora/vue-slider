@@ -13,11 +13,11 @@
     <body>
         <div id="root">
             <div class="flex_container">
-                <div class="prev_photo"><i class="fas fa-chevron-left"></i></div>
+                <div class="prev_photo"><i class="fas fa-chevron-left" @click="prevPhoto()"></i></div>
                 <div class="photo_container">
-                    <img :src="photos[0]" alt="Bears">
+                    <img :src="photos[photoIndex]" alt="Bears">
                 </div>
-                <div class="next_photo"><i class="fas fa-chevron-right"></i></div>
+                <div class="next_photo"><i class="fas fa-chevron-right" @click="nextPhoto()"></i></div>
             </div>
 
         </div>
