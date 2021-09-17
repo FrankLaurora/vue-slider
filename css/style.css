@@ -27,6 +27,7 @@ body {
 
 .photo_container img {
     width: 100%;
+    display: block;
 }
 
 .bullet_box {
