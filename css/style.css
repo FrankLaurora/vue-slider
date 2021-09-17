@@ -1,0 +1,22 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(54, 194, 89);
+}
+
+.flex_container {
+    display: flex;
+    width: 60%;
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+}
+
+.prev_photo, .next_photo {
+    font-size: 3rem;
+}
