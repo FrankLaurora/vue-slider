@@ -21,6 +21,8 @@ body {
 .photo_container {
     position: relative;
     width: 800px;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .photo_container img {

@@ -9,6 +9,8 @@ const app = new Vue({
         ],
 
         photoIndex: 0,
+
+        autoplay: ""
     },
 
     methods: {
@@ -40,8 +42,14 @@ const app = new Vue({
     },
 
     mounted: function() {
-        let autoplay = setInterval(this.nextPhoto, 3000);
+        this.autoplay = setInterval(() => {
+            if(this.photoIndex == this.photos.length - 1) {
+                return this.photoIndex = 0;
+            } else {
+                return this.photoIndex++;
+            }
+        }, 3000);
 
-        return autoplay;
+        return this.autoplay;
     }
 }); 
