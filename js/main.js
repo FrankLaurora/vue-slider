@@ -29,5 +29,11 @@ const app = new Vue({
                 return this.photoIndex--;
             }
         },
-    }
+
+        toSelectedPhoto: function(index) {
+            return this.photoIndex = index;
+        }
+    },
+
+    // mounted: 
 }); 

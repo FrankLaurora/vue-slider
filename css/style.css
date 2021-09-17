@@ -1,5 +1,5 @@
 /* reset */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,17 +12,40 @@ body {
 .flex_container {
     display: flex;
     max-width: 1000px;
+    height: 100vh;
     margin: auto;
     align-items: center;
     justify-content: space-between;
 }
 
 .photo_container {
+    position: relative;
     width: 800px;
 }
 
 .photo_container img {
     width: 100%;
+}
+
+.bullet_box {
+    position: absolute;
+    display: flex;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(105, 224, 224);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.bullet {
+    margin: 0px 10px;
+}
+
+.bullet.active {
+    color: rgb(219, 255, 255);
+    text-shadow: 0px 0px 10px rgb(105, 224, 224);
 }
 
 .prev_photo, .next_photo {
